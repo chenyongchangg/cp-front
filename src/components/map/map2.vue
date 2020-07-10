@@ -36,11 +36,20 @@ export default {
 
       for (var i = 0; i < equipmentData.length; i++) {
         var gprs = equipmentData[i].nbiot_Gprs
-        gprs = gprs.split(',')
+        gprs = gprs.split('|')
         var point = new BMap.Point(gprs[0], gprs[1])
         var marker = new BMap.Marker(point) // 创建标注
-        var content = equipmentData[i].comment + equipmentData[i].devicetype
+        var content = equipmentData[i].comment + equipmentData[i].devicetype + " id:" +  equipmentData[i].id;
         map.addOverlay(marker) // 将标注添加到地图中
+        if(equipmentData[i].state == 0){
+          var content2 = "设备异常";
+          var label = new BMap.Label(content2, {       // 创建文本标注
+            position: point,                          // 设置标注的地理位置
+          })
+          map.addOverlay(label);
+        }
+
+
         this.addClickHandler(content, marker, map);
         // var infoWindow = new BMap.InfoWindow(equipmentData[i].comment+equipmentData[i].devicetype, opts) // 创建信息窗口对象
         // marker.addEventListener('click', function () {
@@ -53,7 +62,8 @@ export default {
           var p = e.target;
           var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
           var infoWindow = new BMap.InfoWindow(content, this.opts);  // 创建信息窗口对象
-          map.openInfoWindow(infoWindow, point); //开启
+
+        map.openInfoWindow(infoWindow, point); //开启
         }
       )
     }
