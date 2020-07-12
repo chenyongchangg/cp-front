@@ -9,7 +9,7 @@
     <!--     search-->
     <el-row class="searchRow">
       <el-col>
-        <el-input placeholder="input" v-model="query" class="inputSearch">
+        <el-input placeholder="input" class="inputSearch">
           <el-button slot="append" icon="el-icon-search"></el-button>
         </el-input>
         <el-button type="success" @click="showAddUserData">add</el-button>
@@ -33,6 +33,11 @@
         prop="message"
         label="message"
         width="180">
+      </el-table-column>
+      <el-table-column
+        prop="createtime"
+        label="时间"
+      >
       </el-table-column>
       <el-table-column
         label="操作">

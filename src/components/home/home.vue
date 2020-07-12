@@ -47,10 +47,6 @@
                 <i class="el-icon-location"></i>
                 <span>地图</span>
               </el-menu-item>
-              <el-menu-item index="exceli">
-                <i class="el-icon-top"></i>
-                <span>报表导入</span>
-              </el-menu-item>
               <el-menu-item index="dash">
                 <i class="el-icon-video-play"></i>
                 <span>dash</span>
@@ -90,6 +86,29 @@
                 <span>报警日志</span>
               </el-menu-item>
             </el-menu-item-group>
+
+          </el-submenu>
+
+          <el-submenu index="6">
+            <template slot="title">
+              <i class="el-icon-coin"></i>
+              <span>数据维护</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="exceli">
+                <i class="el-icon-notebook-1"></i>
+                <span>报表导入</span>
+              </el-menu-item>
+              <el-menu-item index="excelo">
+                <i class="el-icon-notebook-1"></i>
+                <span>报表导入</span>
+              </el-menu-item>
+              <el-menu-item index="datao">
+                <i class="el-icon-notebook-1"></i>
+                <span>数据库导出</span>
+              </el-menu-item>
+            </el-menu-item-group>
+
           </el-submenu>
         </el-menu>
 

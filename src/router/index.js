@@ -9,7 +9,9 @@ import SystemLog from '../components/system/systemlog.vue'
 import AlertLog from '../components/system/alertlog'
 import EquipmentLog from '../components/equipment/equipment.vue'
 import Remote from '../components/remotecontroll/remotecontroll.vue'
-import EXCELI from '../components/map/excelimport.vue'
+import EXCELI from '../components/database/excelimport.vue'
+import DateO from '../components/database/dataexport.vue'
+import EXCELO from '../components/database/excelexport.vue'
 
 Vue.use(Router)
 
@@ -69,6 +71,16 @@ export default new Router({
           name: 'exceli',
           path: '/exceli',
           component: EXCELI
+        },
+        {
+          name: 'datao',
+          path: '/datao',
+          component: DateO
+        },
+        {
+          name: 'excelo',
+          path: '/excelo',
+          component: EXCELO
         }
       ]
     }

@@ -25,23 +25,8 @@
         width="60">
       </el-table-column>
       <el-table-column
-        prop="createtime.year"
-        label="年"
-       >
-      </el-table-column>
-      <el-table-column
-        prop="createtime.month"
-        label="月"
-      >
-      </el-table-column>
-      <el-table-column
-        prop="createtime.day"
-        label="日"
-      >
-      </el-table-column>
-      <el-table-column
-        prop="createtime.hours"
-        label="小时"
+        prop="createtime"
+        label="时间"
       >
       </el-table-column>
       <el-table-column
