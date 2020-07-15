@@ -12,6 +12,7 @@ import Remote from '../components/remotecontroll/remotecontroll.vue'
 import EXCELI from '../components/database/excelimport.vue'
 import DateO from '../components/database/dataexport.vue'
 import EXCELO from '../components/database/excelexport.vue'
+import Earth from '../components/home/earth.vue'
 
 Vue.use(Router)
 
@@ -81,6 +82,11 @@ export default new Router({
           name: 'excelo',
           path: '/excelo',
           component: EXCELO
+        },
+        {
+          name: 'earth',
+          path: '/earth',
+          component: Earth
         }
       ]
     }

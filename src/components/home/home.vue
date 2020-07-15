@@ -51,6 +51,10 @@
                 <i class="el-icon-video-play"></i>
                 <span>dash</span>
               </el-menu-item>
+              <el-menu-item index="earth">
+                <i class="el-icon-video-play"></i>
+                <span>earth</span>
+              </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
 

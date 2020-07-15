@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <el-form ref="loginForm" :model="form" :rules="rules" label-width="80px" class="login-box">
-      <h3 class="login-title">欢迎登录智慧消防云平台</h3>
+      <h3 class="login-title">您的安全，我们守护</h3>
       <el-form-item label="账号" prop="id">
         <el-input type="text" placeholder="请输入账号" v-model="form.id"/>
       </el-form-item>
@@ -57,7 +57,7 @@ export default {
       // eslint-disable-next-line no-constant-condition
       if (true) {
         localStorage.setItem('token', 'data.token')
-        await this.$router.push({name: 'dash'})
+        await this.$router.push({name: 'earth'})
         this.$message.success('登录成功')
       } else {
         this.$message.warning('登录失败')
@@ -88,6 +88,7 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #d3dce6;
+    background-image: url("../../assets/bg.jpg");
+    background-size: cover;
   }
 </style>
